@@ -6,6 +6,8 @@ import defaultImage from "../../assets/images/About-Us_Image.png";
 import { Image, Spin } from "antd";
 import { API_LIMIT } from "../../utils/constant";
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 export default function Dashboard() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -47,13 +49,17 @@ export default function Dashboard() {
 }
 
 function ImageCart({ data }) {
+  const [isValidThumbnail, setIsValidThumbnail] = useState(true)
   const coverImageUrl = data?.cover_i
     ? `https://covers.openlibrary.org/b/id/${data?.cover_i}-L.jpg`
     : defaultImage;
   return (
     <div className="books-card-frame">
       <div className="books-image-frame">
-        <Image src={coverImageUrl} alt="bookImage" />
+        {/* <Image src={coverImageUrl} alt="bookImage" /> */}
+        {isValidThumbnail && 
+        <ImageBlurEffect path={coverImageUrl} setIsValidThumbnail={setIsValidThumbnail} imageClass={''}/>
+        }
       </div>
       <div className="books-description-box">
         <h4 className="fs-24-16 fw-semibold">Title of books</h4>
@@ -72,3 +78,19 @@ function ImageCart({ data }) {
     </div>
   );
 }
+
+
+const ImageBlurEffect = ({ path, setIsValidThumbnail, imageClass }) => {
+  return (<>
+
+    <LazyLoadImage
+      className={`main-img ${imageClass}`}
+      alt="image"
+      effect="blur"
+      src={path}
+      onLoad={(e) => { }}
+      onError={() => setIsValidThumbnail(false)}
+    />
+  </>
+  );
+};
