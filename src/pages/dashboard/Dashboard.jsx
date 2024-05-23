@@ -65,13 +65,13 @@ function ImageCart({ data }) {
         <h4 className="fs-24-16 fw-semibold">Title of books</h4>
         <div className="boos-info-details">
           <p className="fs-16-14 fw-medium my-2">
-            Read count : <span className=" fw-bold">34</span>
+            Read count : <span className=" fw-bold">{data?.already_read_count || ''}</span>
           </p>
           <p className="fs-16-14 fw-medium mb-2">
-            Read count : <span className=" fw-bold">34</span>
+          First Publish Year : <span className=" fw-bold">{data?.first_publish_year}</span>
           </p>
           <p className="fs-16-14 fw-medium mb-0">
-            View count : <span className=" fw-bold">34</span>
+          Author Name : <span className=" fw-bold">{data?.author_name?.[0]}</span>
           </p>
         </div>
       </div>
