@@ -1,0 +1,93 @@
+// =================== SELECT DROPDOWN CSS START ========================
+.custom-ant-sellect-frame {
+    width: 100%;
+    height: 100%;
+
+    .ant-form-item {
+        margin-bottom: 0;
+        height: 100%;
+
+        .ant-row {
+            height: 100%;
+
+            .ant-form-item-row {
+                height: 100%;
+                .ant-form-item-control {
+                    height: 100%;
+                  
+                }
+
+            }
+
+        }
+    }
+    .ant-form-item-control-input {
+        height: 100% ;
+        .ant-form-item-control-input-content {
+            height: 100%;
+        }
+      
+    }
+  
+
+    .ant-select {
+        width: 100% !important;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $black;
+        background: $white;
+        color: $black;
+        max-width: 34rem;
+        font-size: 14px;
+        line-height: 22px;
+        height: 100% !important;
+        &:focus {
+            border: none !important;
+        }
+
+        .ant-select-selector {
+            border: none;
+            box-shadow: none !important;
+
+            .ant-select-selection-search {
+                .ant-select-selection-search-input {
+                    outline: none !important;
+                    padding: 0.6rem 1rem !important;
+                    border: none;
+                    height: auto !important;
+
+                }
+            }
+            .ant-select-selection-placeholder{
+                color: rgba(0, 0, 0,.7) !important; 
+                   
+            }
+        }
+
+    }
+
+}
+
+// =================== SELECT DROPDOWN CSS END ========================
+
+.num-format::-webkit-outer-spin-button,
+.num-format::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.num-format{
+  -moz-appearance: textfield;
+}
+
+.form__label {
+    color: $primary6;
+    margin-bottom: 9px;
+}
+
+.desibled-input{
+    background-color: $grey-ECE !important;
+    color: $grey-3 !important;
+    cursor:not-allowed;
+}

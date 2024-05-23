@@ -1,0 +1,64 @@
+.main-side-bar {
+    min-width: 230px;
+    background-color: $white;
+    border-right: 1px solid $white-f7f;
+
+    .hand-me-logo {
+        padding: 18px 26.9px;
+
+        img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+
+}
+
+.side-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 2px 10px 2px 26px;
+    background-color: $white;
+
+    li {
+        .nav-link {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: rgb(106, 200, 231);
+            color: $white;
+        }
+    }
+
+  
+}
+
+.custom-ant-accordion{
+    .ant-collapse{
+        border: none;
+        .ant-collapse-item{
+            border: none;
+            .ant-collapse-header{
+                padding: 10px;
+                padding: 10px;
+                border-radius: 6px;
+                cursor: pointer;
+                color: $black-757;
+                font-size: 14px;
+                font-weight: 600;
+                background-color: $white;
+            }
+            .ant-collapse-content{
+                border: none;
+                .ant-collapse-content-box{
+                    padding: 1px 0 1px 16px !important;
+
+                }
+            }
+        }
+    }
+}

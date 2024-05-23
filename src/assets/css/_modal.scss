@@ -1,0 +1,27 @@
+
+.custom-modal-class {
+    .ant-modal-content {
+        background-color: $white-f7f;
+        .ant-modal-body {
+            .modal-bth-footer {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                gap: 14px;
+                padding: 10px 0 0;
+            }
+        }
+    }
+}
+
+.modal-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+.mw-400 {
+    width: 100%;
+    max-width: 420px;
+}
