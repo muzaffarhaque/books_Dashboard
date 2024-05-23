@@ -28,9 +28,14 @@ export default function Login() {
     const data = {
       emailAddress: email,
       password: password,
-    }; password
-   
-  //  const res=await loginApi(data,navigation,setLoginInfo);
+    }; 
+
+   if(email && password){
+     navigation('/overview');
+     localStorage.setItem('books', "abdcdfasfdassdf");
+   }else{
+    toast.error("Enter Email and Password.")
+   }
   
   };
   const handleClose = () => {setShow(false)};
@@ -38,38 +43,10 @@ export default function Login() {
   const handleClosePassword=()=>{setIsOpen(false);setEmailAddress("");setOtp("");setNewPassword("")}
 
   async function resetHandler(){
-    // if(emailAddress){
-    //   const data ={
-    //       "emailAddress": emailAddress,
-    //       "type":"otp"
-    //   }
-    //   const res=await forgotPasswordApi(FORGOT_PASSWORD,data)
-    //   if(res){
-    //     toast.success("Open your email")
-    //     handleClose()
-    //     setIsOpen(true)
-    //   }
-    // }else{
-    //   toast.error("Enter your email address.")
-    // }
+  
   }
   async function resetHandlerPassword(){
-  //  if(emailAddress){
-  //   const data={
-  //     "emailAddress":emailAddress,
-  //     "otp":otp,
-  //     "password":newPassword
-  //   }
-   
-  //  const res=await forgotPasswordApi("/user/verify-otp",data)
-  //     if(res){
-  //       toast.success("Updated Successfully")
-  //       handleClosePassword()
-        
-  //     }
-  //   }else{
-  //     toast.error("Something went wrong")
-  //   }
+ 
   }
 
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { SideBar } from "../../components";
 import profile from "../../assets/images/profile.png";
@@ -6,6 +6,7 @@ import userIcon from "../../assets/images/user-solid.svg"
 import logout from "../../assets/images/logout.svg";
 import { Dropdown } from "antd";
 import { Image } from "react-bootstrap";
+import { getToken } from "../../utils/reusableFunction";
 
 export default function Layout() {
     const navigate  =useNavigate();
@@ -21,6 +22,11 @@ export default function Layout() {
           onClick:()=>{navigate('/onboarding');removeToken()}
         },
       ];
+    useEffect(()=>{
+        if(!getToken()){
+          navigate('/onboarding')
+        }
+    },[])
   return (
     <main className="main-section-wrapper d-flex min-vh-100">
       <SideBar />
