@@ -68,15 +68,14 @@ export default function Books() {
       title: "Ratings",
       dataIndex: "ratings_average",
       key: "ratings_average",
-      sorter: (a, b) => a.ratings_average.localeCompare(b.ratings_average),
+      sorter: (a, b) => a?.ratings_average - (b?.ratings_average),
       ellipsis: true,
     },
     {
       title: "First Publish Year",
       dataIndex: "first_publish_year",
       key: "first_publish_year",
-      sorter: (a, b) =>
-        a.first_publish_year.localeCompare(b.first_publish_year),
+      sorter: (a, b) => a.first_publish_year - b.first_publish_year,
       ellipsis: true,
     },
     {
