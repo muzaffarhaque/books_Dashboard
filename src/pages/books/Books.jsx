@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import commonGetApi from "../../server/Api";
 import { FloatButton, Space, Table } from "antd";
 import trashIcon from "../../assets/images/trash-solid.svg";
+// import trashIcon from "../../assets/images/";
 import exclamationCircleIcon from "../../assets/images/circle-exclamation-solid.svg";
 import { API_LIMIT } from "../../utils/constant";
 import { resOk } from "../../utils/reusableFunction";

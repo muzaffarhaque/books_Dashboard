@@ -5,7 +5,6 @@ import commonGetApi from "../../server/Api";
 import defaultImage from "../../assets/images/About-Us_Image.png";
 import { Image, Spin } from "antd";
 import { API_LIMIT } from "../../utils/constant";
-
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 export default function Dashboard() {
@@ -62,7 +61,7 @@ function ImageCart({ data }) {
         }
       </div>
       <div className="books-description-box">
-        <h4 className="fs-24-16 fw-semibold">Title of books</h4>
+        <h4 className="fs-24-16 fw-semibold">{data?.title || ''}</h4>
         <div className="boos-info-details">
           <p className="fs-16-14 fw-medium my-2">
             Read count : <span className=" fw-bold">{data?.already_read_count || ''}</span>
