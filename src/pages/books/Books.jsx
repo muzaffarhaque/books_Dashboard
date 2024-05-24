@@ -94,7 +94,7 @@ export default function Books() {
         <Space size="middle">
           <Image
             src={trashIcon}
-            onClick={() => console.log("Delete", record)}
+            onClick={() => setIsDelete({ deleteData: true, editData: record })}
             alt="deletIcon"
             className="delete-icon"
           />
