@@ -1,6 +1,6 @@
 import React from 'react'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Books, Dashboard, Home, Layout, Login} from './pages';
+import {Books, Dashboard, Home, Layout, Login, ScaleOrder} from './pages';
 export default function Router() {
     const router = createBrowserRouter([
      
@@ -19,6 +19,10 @@ export default function Router() {
                 {
                     path: "/search-books",
                     element:<Books/>
+                },
+                {
+                    path: "/scale-order/:type",
+                    element:<ScaleOrder/>
                 },
             ]
         },

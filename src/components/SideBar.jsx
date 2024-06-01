@@ -33,6 +33,16 @@ export default function SideBar() {
             Books
           </NavLink>
         </li>
+        <li className="fx-14 fw-semibold black-757">
+          <NavLink
+            to="/scale-order/active"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >
+            Scale Order
+          </NavLink>
+        </li>
    
         {/* 
         <li className="custom-ant-accordion">

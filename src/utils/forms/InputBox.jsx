@@ -1,5 +1,5 @@
 import { Form, Select } from "antd";
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 
 export default function InputBox({
   type = "",
@@ -135,6 +135,9 @@ export default function InputBox({
 
     case "num":
       const [num, setNum] = useState(values);
+      useEffect(() => {
+        setNum(values);
+      }, [values]);
       return (
         <div className="">
           {label && (
@@ -164,6 +167,9 @@ export default function InputBox({
       );
     default:
       const [inputVal,setInputVal]=useState(values)
+      useEffect(() => {
+        setInputVal(values);
+      }, [values]);
       return (
         <div className="">
           {label && (

@@ -1,0 +1,26 @@
+.scale-sub-header{
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.primary-btn{
+   padding: 8px 16px;
+   border-radius: 8px;
+   border: 1px solid rgb(205, 201, 201);
+   cursor: pointer;
+   background-color: white;
+   &:hover{
+    background-color: $primary;
+    color: white;
+    border-color: white;
+   }
+}
+.submit-btn,.active-btn{
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgb(205, 201, 201);
+    cursor: pointer;
+    color: white;
+    background-color: $primary;
+}
