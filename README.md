@@ -10,3 +10,8 @@ Currently, two official plugins are available:
 To executer locally 
 1) npm i
 2) npm ruen dev
+
+
+=> On overview page you will see  Popular Books To Read which is getting from open Apoi.
+=> On books Page U will see a table with dynamic pagination and also Search bar. what ever U search it will featch data form api and show reult.
+
