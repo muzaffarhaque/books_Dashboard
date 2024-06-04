@@ -10,6 +10,8 @@ Currently, two official plugins are available:
 
 Deployad Link :https://resplendent-chimera-f0a2a3.netlify.app/
 <br/>
+
+
 To executer locally 
 1) npm i
 2) npm ruen dev
